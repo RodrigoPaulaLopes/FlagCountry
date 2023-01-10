@@ -14,7 +14,7 @@ const controller = {
         const countryNumberFind = countryNumber_json_1.default.find((data) => data.name === name);
         const countryFlagFind = countryFlag_json_1.default.find((value) => value.name === name)?.image;
         if (countryNumberFind === undefined || countryFlagFind === undefined) {
-            return res.status(404).send();
+            return res.status(404).json({ "code": 404, "message": "data undefined" });
         }
         return res.status(200).json({
             ddi: countryNumberFind.dial_code,
