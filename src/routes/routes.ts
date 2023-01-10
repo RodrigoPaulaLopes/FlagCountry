@@ -5,6 +5,6 @@ const routes = Router()
 
 routes.get('/healthcheck', controller.healthcheck)
 routes.get('/country/:name', controller.getCountry)
-routes.get('/country', controller.getAllCountry)
+routes.get('/countrys', controller.getAllCountry)
 
 export default routes

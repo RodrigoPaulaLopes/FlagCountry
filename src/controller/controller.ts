@@ -8,6 +8,7 @@ import { FlagsInterface, NumberFlag } from '../interfaces/Flags.interface'
 
 const controller = {
   healthcheck: (req: Request, res: Response) => res.sendStatus(200),
+
   getCountry: (req: Request, res: Response) => {
     const name = helper.upperWord(req.params.name)
     console.log(`Searched by name: ${name}`)
@@ -26,6 +27,7 @@ const controller = {
       image: countryFlagFind,
     })
   },
+  
   getAllCountry: (req: Request, res: Response) => {
 
     const countryNumberFind: FlagsInterface[] = countryNumber.filter((data) => data.code)
