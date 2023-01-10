@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "compile": "yarn tsc --build --force"
+    "start": "node dist/index.js",
+    "compile": "yarn tsc --build --force",
+    "dev": "yarn tsc --build --force && node dist/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
